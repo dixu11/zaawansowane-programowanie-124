@@ -1,4 +1,4 @@
-package obiektowe.proste;
+package obiektowe.proste.airport;
 
 import java.util.Random;
 
