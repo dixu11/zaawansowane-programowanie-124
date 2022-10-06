@@ -4,7 +4,21 @@ public class LineFactoryDemo {
     public static void main(String[] args) {
         LineFactory factory = new LineFactory();
         Line line = factory.getLineWith('$');
+        line.print();
         System.out.println();
+        factory.getLineWith(1).print();
+        factory.getLineWith(2).print();
+        factory.getLineWith(3).print();
+        factory.getLineWith(4).print();
+        factory.getLineWith(5).print();
+        factory.getLineWith(6).print();
+
+        for (int i = 0; i < 100; i++) {
+            factory.getLineWith(i).print();
+        }
+        for (int i = 100; i > 0; i--) {
+            factory.getLineWith(i).print();
+        }
     }
 }
 

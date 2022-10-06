@@ -11,6 +11,13 @@ public class LineFactory {
         return new Line(length, fill);
     }
 
+    public Line getLineWith(int length){
+        Random random = new Random();
+        int randomAsciNumber = random.nextInt(33, 127);
+        char randomFill = (char) randomAsciNumber;
+        return new Line(length, randomFill);
+    }
+
 
 
 
