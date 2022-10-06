@@ -4,10 +4,18 @@ import java.time.LocalDate;
 
 public class PostofficeDemo {
     public static void main(String[] args) {
-        //Package parcel = new Package(" ", null,1000);
-        LocalDate date = LocalDate.of(2034,13,20);
+       final Package parcel = new Package("Mieczysław Bela", "Artur Leczyński",1000);
+      //  LocalDate date = LocalDate.of(2034,13,20);
+       final Package parcel2 = new Package();
+       final Package parcel3 = null;
 
+       //final uniemożliwia wstawienie innego obiektu
+//       parcel = parcel2;
+//        parcel3= parcel;
 
+        System.out.println(parcel.getPrice());
+        System.out.println(parcel2.getPrice());
+        System.out.println(parcel3.getPrice());
     }
 }
 
@@ -28,12 +36,7 @@ skontroluj, czy cechy paczek ustawiają się poprawnie
 
 Przygotuj drugi alternatywny sposób tworzenia paczek (👉konstruktor), który będzie losował imię nadawcy, imię odbiorcy, wagę paczki i to czy jest ona priorytetowa czy nie.
 
-Przygotuj również metodę pozwalającą wyliczyć i zwrócić cenę paczki, która zostanie wyliczona na podstawie jej parametrów:
-paczka do 0.5 kg  kosztuje 5 zł
-do 1kg kosztuje 8zł
-do 2 kg kosztuje 12 zł
-powyżej 2kg doliczane jest 1 zł za każdy kilogram
-paczka kosztuje 10% drożej jeśli jest priorytetowa
+
 
 manipulacje zmiennymi:
 Przygotuj w main dwie zmienne z paczkami
@@ -42,9 +45,4 @@ Sprawdź cenę paczek wykorzystując te 3 zmienne.
 Napisz instrukcję, która wstawi pierwszą paczkę do trzeciej zmiennej i zastąpi nulla
 wyświetl cenę paczki w trzeciej zmiennej
  Przetestuj co się stanie jeśli ustawisz wszystkie zmienne jako “final”.
-
-*
-*
-*
-*
 * */
