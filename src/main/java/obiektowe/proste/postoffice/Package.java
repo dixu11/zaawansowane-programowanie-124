@@ -8,6 +8,7 @@ public class Package {
    final String recipient;
    final int weightInGram;
    final boolean priority;
+   Status status = Status.CREATED;
 
 
     public Package(String sender, String recipient, int weightInGram) {
@@ -57,6 +58,7 @@ public class Package {
         }
         return  price;
     }
+
 
 //    return (weight > 0.5 && weight <= 1) ? 8 : (weight > 1 && weight <= 2) ? 12 : (weight > 2) ? (12.0 + (weight - 2.0)) : 5.0;
 
