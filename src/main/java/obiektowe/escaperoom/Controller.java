@@ -10,7 +10,9 @@ private Game game=new Game();
         System.out.println("Rozpoczynasz grę.");
         System.out.println("Widzisz pokój z różnymi przedmiotami, z którymi możesz wchodzić w interakcję");
        List<Item> items=  game.getItems();
-        System.out.println(items);
+        for (Item item : items) {
+            System.out.println(item.getName());
+        }
     }
 
 
