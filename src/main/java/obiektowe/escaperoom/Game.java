@@ -10,4 +10,9 @@ public class Game {
     public List<Item> getItems() {
         return room.getItems();
     }
+
+    public void useItem(String itemName) throws ItemNotFoundException {
+        Item itemFound = room.findItemBy(itemName);
+        itemFound.use(); // polimorfizm w praktyce
+    }
 }
