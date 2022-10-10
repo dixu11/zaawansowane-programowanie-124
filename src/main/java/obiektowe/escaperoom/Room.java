@@ -1,9 +1,13 @@
 package obiektowe.escaperoom;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Room {
 
-    List<Item> items;
+   private List<Item> items = new ArrayList<>();
 
+   public List<Item> getItems() {
+      return items;
+   }
 }
