@@ -7,7 +7,7 @@ private String name;
         this.name = name;
     }
 
-    public abstract void use() ;
+    public abstract String use() ;
 
     public String getName() {
         return name;

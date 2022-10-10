@@ -10,9 +10,15 @@ private Game game=new Game();
     public void startGame() {
         System.out.println("Rozpoczynasz grę.");
         System.out.println("Widzisz pokój z różnymi przedmiotami, z którymi możesz wchodzić w interakcję");
-       showItems();
-        String itemName = selectItem();
-        useItem(itemName);
+        askForItems();
+    }
+
+    private void askForItems() {
+        do{
+            showItems();
+            String itemName = selectItem();
+            useItem(itemName);
+        }while (true);
     }
 
     private void showItems() {
@@ -30,7 +36,8 @@ private Game game=new Game();
 
     private void useItem(String itemName) {
         try{
-            game.useItem(itemName);
+            String result = game.useItem(itemName);
+            System.out.println(result);
             System.out.println("Przedmiot " + itemName + " aktywowany");
         }catch (ItemNotFoundException e){
             System.out.println("Nie znaleziono przedmiotu!");
