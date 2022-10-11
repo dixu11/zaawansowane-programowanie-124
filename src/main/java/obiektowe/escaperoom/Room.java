@@ -14,7 +14,7 @@ public class Room {
    }
 
    public List<Item> getItems() {
-      return items;
+      return new ArrayList<>(items);
    }
 
    public Item findItemBy(String name) throws ItemNotFoundException{
@@ -27,5 +27,7 @@ public class Room {
    }
 
 
-
+   public void removeItem(Item item) {
+      items.remove(item);
+   }
 }

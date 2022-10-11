@@ -7,7 +7,7 @@ private String name;
         this.name = name;
     }
 
-    public abstract String use() ;
+    public abstract String use(Room room);
 
     public String getName() {
         return name;
