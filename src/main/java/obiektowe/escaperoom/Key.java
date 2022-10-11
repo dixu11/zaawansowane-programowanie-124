@@ -6,11 +6,11 @@ public class Key extends Item{
     }
 
     @Override
-    public String use(Room room, Player player, Game game) {
+    public String use(UseContext context) {
         //room.getItems().remove(this);
         //Key key = this;
-        player.addItem(this);
-        room.removeItem(this);
+        context.getPlayer().addItem(this);
+        context.getRoom().removeItem(this);
         return "Używam, klucza";
     }
 }

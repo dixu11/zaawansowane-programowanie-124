@@ -7,7 +7,7 @@ private String name;
         this.name = name;
     }
 
-    public abstract String use(Room room, Player player, Game game);
+    public abstract String use(UseContext context);
 
     public String getName() {
         return name;
