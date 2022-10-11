@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 // klasa do interakcjni z aplikacją - wyświetla komunikaty, pozwala wprowadzać decyzje gracza do programu
-public class Controller {
+public class ConsoleController {
 
 private Game game=new Game();
     public void startGame() {

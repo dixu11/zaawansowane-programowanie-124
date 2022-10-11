@@ -1,13 +1,12 @@
 package obiektowe.escaperoom;
 
-import java.util.ArrayList;
-import java.util.List;
-
 //rozruch programu i przygotowywanie niezbędnych do tego obiektów
 public class App {
     public static void main(String[] args) {
-        Controller controller = new Controller();
-        controller.startGame();
+//        String name = JOptionPane.showInputDialog("Jak masz na imie? ");
+//        JOptionPane.showMessageDialog(null,"Hello " + name);
+        ConsoleController consoleController = new ConsoleController();
+        consoleController.startGame();
     }
 }
 
