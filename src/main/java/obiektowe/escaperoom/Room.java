@@ -8,9 +8,10 @@ public class Room {
    private List<Item> items = new ArrayList<>();
 
    public Room() {
-      items.add(new Door());
+      Key key =new Key();
+      items.add(new Door(key));
       items.add(new Window());
-      items.add(new Key());
+      items.add(key);
    }
 
    public List<Item> getItems() {

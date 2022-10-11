@@ -9,7 +9,7 @@ public class Window  extends Item{
     }
 
     @Override
-    public String use(Room room) {
+    public String use(Room room, Player player, Game game) {
 //        open = open ? false : true;
         /*if (open) {
             open = false;

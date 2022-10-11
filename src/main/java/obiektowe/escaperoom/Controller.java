@@ -11,12 +11,13 @@ private Game game=new Game();
         System.out.println("Rozpoczynasz grę.");
         System.out.println("Widzisz pokój z różnymi przedmiotami, z którymi możesz wchodzić w interakcję");
         repeatInteraction();
+        System.out.println("Gratulacje, rozwiązałeś zagadkę i wygrałeś!");
     }
 
     private void repeatInteraction() {
         do{
             executeInteraction();
-        }while (true);
+        }while (game.isGameRunning());
     }
 
     private void executeInteraction() {
