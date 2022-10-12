@@ -13,4 +13,18 @@ public class Restaurant {
     public void remove(Dish dish) {
         dishes.remove(dish);
     }
+
+    public Dish findDishBy(String name){
+      return   dishes.stream()
+                .filter(dish -> dish.getName().equalsIgnoreCase(name))
+                .findFirst()
+                .orElseThrow(() -> new RestaurantException("Nie znaleziono dania!"));
+    }
+
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "dishes=" + dishes +
+                '}';
+    }
 }
