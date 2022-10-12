@@ -41,4 +41,8 @@ public class Dish {
     public String getName() {
         return name;
     }
+
+    public DishType getType() {
+        return type;
+    }
 }

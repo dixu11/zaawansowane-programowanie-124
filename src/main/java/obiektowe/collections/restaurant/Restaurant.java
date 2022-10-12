@@ -1,6 +1,8 @@
 package obiektowe.collections.restaurant;
 
+import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Restaurant {
@@ -19,6 +21,12 @@ public class Restaurant {
                 .filter(dish -> dish.getName().equalsIgnoreCase(name))
                 .findFirst()
                 .orElseThrow(() -> new RestaurantException("Nie znaleziono dania!"));
+    }
+
+    public Collection<Dish> findDishesBy(DishType type) {
+       return dishes.stream()
+                .filter(dish -> dish.getType().equals(type))
+                .toList();
     }
 
     @Override

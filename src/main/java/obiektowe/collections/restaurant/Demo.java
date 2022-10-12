@@ -19,6 +19,8 @@ public class Demo {
         restaurant.add(dish5);
 
         System.out.println(restaurant);
+        System.out.println(restaurant.findDishBy("pierogi"));
+        System.out.println(restaurant.findDishesBy(DishType.APPETISER));
     }
 
     /*
@@ -38,4 +40,12 @@ stwórz metodę pozwalającą wyszukać dania po typie potrawy, jeśli nie ma ż
 * pustą listę.
 
     * */
+
+class Wewnetrzna{ // może korzystać z prywatnych pól klasy zewnętrznej
+
+}
+}
+
+class Pakietowa{
+
 }
