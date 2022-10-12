@@ -1,7 +1,6 @@
 package obiektowe.exception;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 public class FinallyDemo {
     public static void main(String[] args) {
