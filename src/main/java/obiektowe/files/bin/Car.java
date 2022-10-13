@@ -1,13 +1,19 @@
 package obiektowe.files.bin;
 
+import java.io.Serializable;
 import java.util.Objects;
+import java.util.Scanner;
 
-class Car {
+class Car  implements Serializable {
+
+   public static final long serialVersionUID = -9151209106588661959L; // przejąłęm zdalne sterowanie nad ID klasy aby, stare zapisy działały
+
     private String brand;
     private String model;
     private double mileageInThousandsKm;
     private double capacity;
     private Engine engine;
+    private transient Scanner scanner = new Scanner(System.in);  // pomiń dane pole przy serializacji
 
     public Car(String brand, String model, double mileageInThousandsKm, double capacity, Engine engine) {
         this.brand = brand;
@@ -15,11 +21,6 @@ class Car {
         this.mileageInThousandsKm = mileageInThousandsKm;
         this.capacity = capacity;
         this.engine = engine;
-    }
-
-
-    public String toCsv() {
-        return String.format("%s;%s;%.1f;%.1f",brand,model,mileageInThousandsKm,capacity);
     }
 
     @Override

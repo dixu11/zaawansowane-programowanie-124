@@ -1,8 +1,9 @@
 package obiektowe.files.bin;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Engine {
+public class Engine implements Serializable {
     private String typ;
 
     public Engine(String typ) {
