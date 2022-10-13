@@ -1,19 +1,14 @@
-package obiektowe.files.bin;
+package obiektowe.files.json;
 
-import java.io.Serializable;
 import java.util.Objects;
-import java.util.Scanner;
 
-class Car  implements Serializable {
-
-    public static final long serialVersionUID = -9151209106588661959L; // przejąłęm zdalne sterowanie nad ID klasy aby, stare zapisy działały
+class Car  {
 
     private String brand;
     private String model;
     private double mileageInThousandsKm;
     private double capacity;
     private Engine engine;
-    private transient Scanner scanner = new Scanner(System.in);  // pomiń dane pole przy serializacji
 
     public Car(String brand, String model, double mileageInThousandsKm, double capacity, Engine engine) {
         this.brand = brand;
@@ -21,6 +16,29 @@ class Car  implements Serializable {
         this.mileageInThousandsKm = mileageInThousandsKm;
         this.capacity = capacity;
         this.engine = engine;
+    }
+
+     Car() {
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public double getMileageInThousandsKm() {
+        return mileageInThousandsKm;
+    }
+
+    public double getCapacity() {
+        return capacity;
+    }
+
+    public Engine getEngine() {
+        return engine;
     }
 
     @Override

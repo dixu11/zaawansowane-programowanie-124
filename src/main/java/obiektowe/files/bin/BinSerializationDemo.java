@@ -1,6 +1,5 @@
 package obiektowe.files.bin;
 
-
 import java.io.*;
 
 public class BinSerializationDemo {
