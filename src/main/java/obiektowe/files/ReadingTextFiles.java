@@ -2,6 +2,10 @@ package obiektowe.files;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
 import java.util.Scanner;
 //SCANNER - ODCZYT Z PLIKU
 public class ReadingTextFiles {
@@ -19,5 +23,15 @@ public class ReadingTextFiles {
             System.out.println("Nie znaleziono pliku!");
             e.printStackTrace();
         }
+
+        //sposób 2
+        try {
+            List<String> list = Files.readAllLines(Path.of("car.txt"));
+            System.out.println(list);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }
