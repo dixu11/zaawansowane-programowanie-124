@@ -1,6 +1,7 @@
 package obiektowe.classes;
 
 import javax.swing.*;
+import java.util.Random;
 
 public class Zewnetrzna {
     private int pole;
@@ -75,6 +76,15 @@ class Main {
         przycisk.click();
 
 
+
+        Shouter shouter2 = (String text) -> {
+                System.out.println("!!!" + text + "!!!");
+            };
+
+        Shouter shouter3 = text ->  System.out.println("!!!" + text + "!!!");
+
+
+
     }
 
 
@@ -104,11 +114,12 @@ class Car{
 
 
 }
-
+@FunctionalInterface // interfej który ma dokładnie jedną metodę abstrakcyjną
 interface Shouter{
     void shout(String text);
 }
 
+@FunctionalInterface
 interface Funkcja{
     void coRobieNaKliknecie();
 }
