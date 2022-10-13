@@ -2,7 +2,7 @@ package obiektowe.files;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-
+//PRINT WRITER
 public class TextFilesDemo {
     public static void main(String[] args) {
         //passat 1.9 tdi 180 tys km
